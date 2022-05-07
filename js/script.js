@@ -3,6 +3,8 @@
 const questionEl = document.querySelectorAll('.question');
 const answerEl = document.querySelectorAll('.answer');
 const iconEl = document.querySelectorAll('.icon');
+const illustrationDesktop = document.querySelector('.illustration-desktop');
+const illustrationMobile = document.querySelector('.illustration-mobile');
 
 function removeClass() {
   for (let i = 0; i < questionEl.length; i++) {
@@ -24,3 +26,13 @@ for (let i = 0; i < questionEl.length; i++) {
     iconEl[i].classList.toggle('icon--reverse');
   });
 }
+
+window.addEventListener('resize', function () {
+  if (this.window.innerWidth <= 864) {
+    illustrationDesktop.classList.add('illustration--invisible');
+    illustrationMobile.classList.remove('illustration--invisible');
+  } else {
+    illustrationDesktop.classList.remove('illustration--invisible');
+    illustrationMobile.classList.add('illustration--invisible');
+  }
+});

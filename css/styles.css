@@ -47,7 +47,7 @@ body {
   background-image: url('../images/bg-pattern-desktop.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -51rem -28rem;
+  background-position: -52rem -28rem;
 }
 
 /* IMAGES */
@@ -66,22 +66,27 @@ body {
 .illustration-container {
   overflow: hidden;
   height: 100%;
+  display: grid;
+  align-items: center;
 }
 
-.illustration {
-  width: 48rem;
-  height: 100%;
-  background: url('../images/illustration-woman-online-desktop.svg');
-  margin-left: -7rem;
-  margin-top: 5rem;
-  background-repeat: no-repeat;
-  background-size: contain;
+.illustration-desktop {
+  margin-left: -7.5rem;
+}
+
+.illustration-mobile {
+  width: 23.5rem;
+  margin-top: -10.5rem;
+}
+
+.illustration--invisible {
+  display: none;
 }
 
 .cube {
   position: absolute;
-  left: -19%;
-  top: 37%;
+  left: -9.25rem;
+  top: 20rem;
 }
 
 /* QUESTIONS */
@@ -140,7 +145,7 @@ body {
   padding-right: 2.6rem;
   line-height: 1.5;
   margin-top: -100%;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.4s;
 }
 
 /* Classes added by javascript */
